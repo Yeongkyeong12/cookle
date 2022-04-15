@@ -14,11 +14,15 @@ function Recommended() {
     );
     const data = await api.json();
     setRecommend(data.recipes);
+    console.log(data.recipes);
   };
   return (
     <div>
       {recommend.map((recipe) => (
-        <li key={recipe.id}>{recipe.title}</li>
+        <li key={recipe.id}>
+          {recipe.title}
+          <img src={recipe.image``} alt="img" />
+        </li>
       ))}
     </div>
   );
