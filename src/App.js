@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Home from "./pages/Home";
-import MyRecipe from "./pages/MyRecipe";
+import WishList from "./pages/WishList";
 import Login from "./pages/Login";
 
 function App() {
@@ -9,16 +9,14 @@ function App() {
       <nav>
         <Link to="/">Home</Link>
         <Link to="/login">Login</Link>
-        <Link to="/myrecipe">MyRecipe</Link>
+        <Link to="/wishlist">WishList</Link>
       </nav>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/myrecipe" element={<MyRecipe />} />
-        {/* <Route path="/myrecipe/:username" element={<MyRecipe />} /> */}
-        {/* <Route path="*" element={<ErrorPage />} /> */}
+        <Route path="/wishlist" element={<WishList />} />
+        {/* <Route path="/wishlist:username" element={<WishList />} /> */}
       </Routes>
-      <div>footer</div>
     </Router>
   );
 }
