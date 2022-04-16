@@ -17,7 +17,7 @@ function NavbarHeader() {
             <Nav>
               <Nav.Link href="#deets">Login</Nav.Link>
               <Nav.Link eventKey={2} href="#memes">
-                <FiHeart />
+                <FiHeart className="ml-2" />
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>
