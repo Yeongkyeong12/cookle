@@ -3,14 +3,14 @@
 // import WishList from "./pages/WishList";
 // import Login from "./pages/Login";
 import "bootstrap/dist/css/bootstrap.min.css";
-import MyJumbotron from "./components/Jumbotron/MyJumbotron";
 import NavbarHeader from "./components/NavbarHeader";
+import Home from "./pages/Home";
 
 function App() {
   return (
     <div className="jumbotron">
       <NavbarHeader />
-      <MyJumbotron />
+      <Home />
     </div>
     // <Router>
     //   <nav>

@@ -5,6 +5,8 @@ import { InputGroup, FormControl, Button } from "react-bootstrap";
 function MyJumbotron() {
   return (
     <Wrapper>
+      <h1>Cookle,</h1>
+      <h2>Recipes All Around The World</h2>
       <InputWrapper>
         <InputGroup className="mb-3">
           <FormControl
@@ -29,12 +31,19 @@ const Wrapper = styled.div`
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 500px;
+  height: 25rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+
+  h1,
+  h2 {
+    color: #fff;
+  }
 `;
 
 const InputWrapper = styled.div`
   width: 65%;
+  margin-top: 1.563rem;
 `;
