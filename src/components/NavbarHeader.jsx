@@ -15,8 +15,8 @@ function NavbarHeader() {
               <Nav.Link href="#pricing"></Nav.Link>
             </Nav>
             <Nav>
-              <Nav.Link href="#deets">Login</Nav.Link>
-              <Nav.Link eventKey={2} href="#memes">
+              <Nav.Link href="/login">Login</Nav.Link>
+              <Nav.Link eventKey={2} href="/wishlist">
                 <FiHeart className="ml-2" />
               </Nav.Link>
             </Nav>

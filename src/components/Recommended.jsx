@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
 
-//Home화면 추천 레시피
+//Home화면 랜덤 추천 레시피
 function Recommended() {
   const [recommend, setRecommend] = useState([]);
   useEffect(() => {
@@ -29,7 +29,7 @@ function Recommended() {
   return (
     <div>
       <Wrapper>
-        <Title>Today's Picks</Title>
+        <Title>Today's Pick</Title>
 
         <Splide
           options={{
@@ -83,7 +83,7 @@ const Card = styled.div`
     left: 50%;
     bottom: 0%;
     transform: translate(-50%, 0%);
-    color: white;
+    color: #fff;
     width: 100%;
     text-align: center;
     font-weight: 600;

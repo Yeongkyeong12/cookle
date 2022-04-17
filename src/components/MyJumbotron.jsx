@@ -1,24 +1,15 @@
 import React from "react";
 import styled from "styled-components";
-import { InputGroup, FormControl, Button } from "react-bootstrap";
+import Search from "./Search";
 
 function MyJumbotron() {
   return (
     <Wrapper>
       <h1>Cookle,</h1>
       <h2>Recipes All Around The World</h2>
-      <InputWrapper>
-        <InputGroup className="mb-3">
-          <FormControl
-            placeholder="Search Recipes!"
-            aria-label="Recipe Search Input"
-            aria-describedby="search-button"
-          />
-          <Button variant="warning" id="button-addon2">
-            Search
-          </Button>
-        </InputGroup>
-      </InputWrapper>
+      <SearchWrapper>
+        <Search />
+      </SearchWrapper>
     </Wrapper>
   );
 }
@@ -37,13 +28,16 @@ const Wrapper = styled.div`
   align-items: center;
   flex-direction: column;
 
-  h1,
+  h1 {
+    color: #fff;
+    font-weight: 600;
+  }
   h2 {
     color: #fff;
   }
 `;
 
-const InputWrapper = styled.div`
+const SearchWrapper = styled.div`
   width: 65%;
   margin-top: 1.563rem;
 `;
