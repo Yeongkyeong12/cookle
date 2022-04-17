@@ -11,16 +11,25 @@ function Recommended() {
   }, []);
 
   const getRecommend = async () => {
-    const api = await fetch(
-      `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=8`
-    );
-    const data = await api.json();
-    setRecommend(data.recipes);
+    const check = localStorage.getItem("recommend");
+
+    if (check) {
+      setRecommend(JSON.parse(check));
+    } else {
+      const api = await fetch(
+        `https://api.spoonacular.com/recipes/random?apiKey=${process.env.REACT_APP_API_KEY}&number=8`
+      );
+      const data = await api.json();
+
+      localStorage.setItem("recommend", JSON.stringify(data.recipes));
+      setRecommend(data.recipes);
+      console.log(data.recipes);
+    }
   };
   return (
     <div>
       <Wrapper>
-        <h3>Today's Picks</h3>
+        <Title>Today's Picks</Title>
 
         <Splide
           options={{
@@ -32,7 +41,7 @@ function Recommended() {
         >
           {recommend.map((recipe) => {
             return (
-              <SplideSlide>
+              <SplideSlide key={recipe.id}>
                 <Card>
                   <p>{recipe.title}</p>
                   <img src={recipe.image} alt={recipe.title} />
@@ -46,8 +55,12 @@ function Recommended() {
   );
 }
 
+const Title = styled.h3`
+  font-weight: 600;
+`;
 const Wrapper = styled.div`
-  margin: 4rem 0rem;
+  /* margin: 4rem 0rem; */
+  margin: 4rem 10%;
 `;
 
 const Card = styled.div`
