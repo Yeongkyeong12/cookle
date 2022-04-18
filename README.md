@@ -1,6 +1,7 @@
 # 🍳Cookle
 
-### 프로젝트 소개
+## 프로젝트 소개
+
 - [Demo](https://cookle-project.netlify.app/) 
 - Cook + Google = Cookle 이라는 이름으로 기획된 **요리레시피 검색 웹사이트**입니다.
 - [Spoonacular API](https://spoonacular.com/food-api)를 async await 함수로 호출하였습니다.
@@ -17,7 +18,8 @@
 - `styled-components`와 `Bootstrap`을 활용한 반응형 웹사이트 제작 방법을 익혔습니다.
 
 
-### 추가할 내용
+## 추가할 점
+
 - (22.04.18 기준, 개발 진행 중)
 - 레시피 카드의 `♥(like)` 아이콘을 누르면, `♥(like)`페이지에 해당 레시피들이 정리되도록 하기(상태관리 필요)
 - 로그인 기능을 추가해서 각 유저마다 `♥(like)`를 누른 레시피 내용이 다르도록 만들기 
