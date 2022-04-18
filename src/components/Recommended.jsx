@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
+import { Link } from "react-router-dom";
 
 //Home화면 랜덤 추천 레시피
 function Recommended() {
@@ -43,8 +44,10 @@ function Recommended() {
             return (
               <SplideSlide key={recipe.id}>
                 <Card>
-                  <p>{recipe.title}</p>
-                  <img src={recipe.image} alt={recipe.title} />
+                  <Link to={"/recipe/" + recipe.id}>
+                    <p>{recipe.title}</p>
+                    <img src={recipe.image} alt={recipe.title} />
+                  </Link>
                 </Card>
               </SplideSlide>
             );
@@ -59,7 +62,6 @@ const Title = styled.h3`
   font-weight: 600;
 `;
 const Wrapper = styled.div`
-  /* margin: 4rem 0rem; */
   margin: 4rem 10%;
 `;
 
