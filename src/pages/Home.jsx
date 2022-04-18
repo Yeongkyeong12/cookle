@@ -1,12 +1,18 @@
 import MyJumbotron from "../components/MyJumbotron";
 import Recommended from "../components/Recommended";
+import { motion } from "framer-motion";
 
 function Home() {
   return (
-    <div>
+    <motion.div
+      animate={{ opacity: 1 }}
+      initial={{ opacity: 0 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
+    >
       <MyJumbotron />
       <Recommended />
-    </div>
+    </motion.div>
   );
 }
 

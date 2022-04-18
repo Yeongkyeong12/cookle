@@ -5,18 +5,21 @@ import Searched from "./Searched";
 import Recipe from "./Recipe";
 import WishList from "./WishList";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
 
 function Pages() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/wishlist" element={<WishList />} />
-        <Route path="/searched/:search" element={<Searched />} />
-        <Route path="/recipe/:name" element={<Recipe />} />
-      </Routes>
-    </BrowserRouter>
+    <AnimatePresence exitBeforeEnter>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/wishlist" element={<WishList />} />
+          <Route path="/searched/:search" element={<Searched />} />
+          <Route path="/recipe/:name" element={<Recipe />} />
+        </Routes>
+      </BrowserRouter>
+    </AnimatePresence>
   );
 }
 
