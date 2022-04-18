@@ -1,13 +1,20 @@
 import React from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { FiHeart } from "react-icons/fi";
+import { GiCook } from "react-icons/gi";
+import styled from "styled-components";
 
 function NavbarHeader() {
   return (
     <div>
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
         <Container>
-          <Navbar.Brand href="/">Cookle</Navbar.Brand>
+          <Navbar.Brand href="/">
+            <Div>
+              <GiCook className="mb-1" />
+              Cookle
+            </Div>
+          </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
@@ -26,5 +33,10 @@ function NavbarHeader() {
     </div>
   );
 }
+
+const Div = styled.div`
+  align-items: center;
+  font-weight: 500;
+`;
 
 export default NavbarHeader;
